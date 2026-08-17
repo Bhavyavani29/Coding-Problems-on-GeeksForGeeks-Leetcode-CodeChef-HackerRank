@@ -59,7 +59,7 @@ else{
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T16:44:37.907Z  
+**Submitted:** 2026-08-16T16:44:40.762Z  
 
 ```cpp
 import java.util.*;
