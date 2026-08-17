@@ -4,10 +4,8 @@ class Codechef
 {
 	public static void main (String[] args) 
 	{
-        int n;
-        n = 8;
-        String s = "CodeChef";
-        System.out.println(s.charAt(n-1));
+        int a = (5 + 7); 
+        System.out.print(a);
 
 	}
 }
