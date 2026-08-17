@@ -55,31 +55,31 @@ Alice has scored $X = 1$ mark whereas Bob has scored $Y = 2$ marks. As Alice has
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-15T17:11:35.293Z  
+**Submitted:** 2026-08-15T17:11:53.808Z  
 
 ```java
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
+
 class Codechef
 {
-    public static void main (String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        
-        // Checking if Alice's marks are at least twice of Bob's marks
-        if (x >= 2 * y) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
-        
-        sc.close(); // Good practice to close the scanner
-    }
+	public static void main (String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		
+		// write your code here
+		if(x >= y * 2)
+		    System.out.println("Yes");
+		else
+		    System.out.println("No");
+		
+	}
 }
+
 ```
 
 ---
