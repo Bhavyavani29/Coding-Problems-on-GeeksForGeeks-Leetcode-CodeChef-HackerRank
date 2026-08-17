@@ -4,14 +4,28 @@
 
 ## Problem
 
-_Description not available._
+### Debug the code
+
+Identify and correct the logic to check if a number is even. The program should print `true` if number is even, else `false`.
+
+### Sample 1:
+Input
+Output
+
+```
+
+```
+
+```
+false
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T04:23:52.558Z  
+**Submitted:** 2026-08-17T04:24:41.785Z  
 
 ```java
 import java.util.Scanner;
@@ -20,9 +34,17 @@ class Codechef
 {
 	public static void main (String[] args) 
 	{
-	    Scanner sc = new Scanner(System.in);
-	    int number = 19;
-        System.out.println(number);
+        int n;
+        n = 5;
+
+        if (n % 2 == 0) 
+        {
+            System.out.println("true");
+        } 
+        else 
+        {
+            System.out.println("false");
+        }
 
 	}
 }
