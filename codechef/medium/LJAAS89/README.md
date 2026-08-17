@@ -25,7 +25,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T04:26:19.205Z  
+**Submitted:** 2026-08-17T04:26:26.834Z  
 
 ```java
 import java.util.Scanner;
@@ -35,7 +35,7 @@ class Codechef
 	public static void main (String[] args) 
 	{
         int a = (5 + 7); 
-        System.out.print(a);
+        System.out.println(a);
 
 	}
 }
