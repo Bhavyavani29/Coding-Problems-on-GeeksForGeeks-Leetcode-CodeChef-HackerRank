@@ -4,9 +4,17 @@ class Codechef
 {
 	public static void main (String[] args) 
 	{
-	    Scanner sc = new Scanner(System.in);
-	    int number = 19;
-        System.out.println(number);
+        int n;
+        n = 5;
+
+        if (n % 2 == 0) 
+        {
+            System.out.println("true");
+        } 
+        else 
+        {
+            System.out.println("false");
+        }
 
 	}
 }
