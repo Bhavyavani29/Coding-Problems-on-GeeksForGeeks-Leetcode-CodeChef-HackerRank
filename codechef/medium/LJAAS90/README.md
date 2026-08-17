@@ -4,24 +4,49 @@
 
 ## Problem
 
-_Description not available._
+### Debug the code
+
+Rectify the errors in the program to get the desired output.
+
+### Sample 1:
+Input
+Output
+
+```
+
+```
+
+```
+Option 2 selected
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T04:26:28.575Z  
+**Submitted:** 2026-08-17T04:27:07.297Z  
 
 ```java
 import java.util.Scanner;
-
 class Codechef
 {
 	public static void main (String[] args) 
 	{
-        int a = (5 + 7); 
-        System.out.println(a);
+        int choice = 2;
+        switch(choice){
+            case 1:
+                System.out.println("Option 1 selected");
+                break;
+            case 2:
+                System.out.println("Option 2 selected");
+                break;
+            case 3:
+                System.out.println("Option 3 selected");
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
 
 	}
 }
