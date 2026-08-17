@@ -4,14 +4,28 @@
 
 ## Problem
 
-_Description not available._
+### Debug the code
+
+Rectify the errors to make the program compile successfully.
+
+### Sample 1:
+Input
+Output
+
+```
+
+```
+
+```
+12
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T04:25:52.553Z  
+**Submitted:** 2026-08-17T04:26:19.205Z  
 
 ```java
 import java.util.Scanner;
@@ -20,10 +34,8 @@ class Codechef
 {
 	public static void main (String[] args) 
 	{
-        int n;
-        n = 8;
-        String s = "CodeChef";
-        System.out.println(s.charAt(n-1));
+        int a = (5 + 7); 
+        System.out.print(a);
 
 	}
 }
