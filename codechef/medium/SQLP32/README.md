@@ -24,11 +24,11 @@ address
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T16:35:07.471Z  
+**Submitted:** 2026-08-19T16:36:25.429Z  
 
 ```sql
 -- your code goes here
-Select user_id, name, email, phone, address from Users where user_id in(Select pmt.user_id from Payments pmt group by user_id having count(*) > 1) Order by user_id;
+Select user_id, name, email, phone, address from Users where user_id in(Select pmt.user_id from Payments pmt group by user_id having count(*) > 1) And user_id in(Select bk.user_id from bookings bk where start_date >= '2023-07-01' And end_date <= '2023-07-31') Order by user_id;
 ```
 
 ---
