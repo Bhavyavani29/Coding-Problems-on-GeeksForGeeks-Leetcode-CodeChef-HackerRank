@@ -16,7 +16,7 @@ Given that in a particular turn Chef and Chefina got $X$ and $Y$ on their respec
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T17:15:16.170Z  
+**Submitted:** 2026-08-21T17:15:17.858Z  
 
 ```cpp
 import java.util.*;
