@@ -4,9 +4,9 @@
 
 ## Problem
 
-### Increase the integer
+### Even odd
 
-Write a program that takes t test cases as input, then for each test case, reads an integer N, and prints N + 1.
+Write a program that first accepts the number of test cases  **t**. For each test case, read an integer  **num**. Check if  **num**  is even using the  **isEven**  function. If  **num**  is even, output  **"Even"** ; otherwise, output  **"Odd"**.
 
 ### Sample 1:
 Input
@@ -14,15 +14,15 @@ Output
 
 ```
 3
-4
 2
--1
+6
+5
 ```
 
 ```
-5
-3
-0
+Even
+Even
+Odd
 ```
 
 ## Solution
@@ -30,24 +30,33 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T15:40:04.287Z  
+**Submitted:** 2026-08-24T15:46:18.673Z  
 
 ```java
 import java.util.Scanner;
-class Codechef
-{
-	public static void main (String[] args) 
-	{
-		// your code goes here
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
-		while(t --> 0){
-		    int N = sc.nextInt();
-		     System.out.println(N  + 1);
-		}
-	}
-}
 
+public class Main {
+    public static void main(String[] args) {
+        // your code goes here
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t--> 0) {
+            int num = sc.nextInt();
+            if (isEven(num)) {
+                System.out.println("Even");
+            }
+            else {
+                System.out.println("Odd");
+            }
+
+        }
+    }
+
+        public static boolean isEven(int num) {
+            // Complete this method 
+            return num % 2 == 0;
+        }
+    }
 ```
 
 ---
