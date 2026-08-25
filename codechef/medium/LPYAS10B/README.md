@@ -4,20 +4,43 @@
 
 ## Problem
 
-### Print Learn Coding on CodeChef
+### Print Right Angled Triangle
 
-Print  **"Learn Coding on CodeChef"**  to the console.
+Print the following pattern (check the sample output).
+
+Hint: You can do this without using loops as well.
+
+### Sample 1:
+Input
+Output
+
+```
+ 
+```
+
+```
+*
+**
+***
+  
+  *
+
+```
 
 ## Solution
 
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-25T17:00:49.412Z  
+**Submitted:** 2026-08-25T17:01:17.094Z  
 
 ```py
-# cook your dish here
-print("Learn Coding on CodeChef")
+print("*")
+print("**")
+print("***")
+print("****")
+print("*****")
+
 ```
 
 ---
