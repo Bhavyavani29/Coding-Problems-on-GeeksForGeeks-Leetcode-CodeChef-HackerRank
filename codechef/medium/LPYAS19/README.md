@@ -18,12 +18,12 @@ I love CodeChef
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T16:45:13.365Z  
+**Submitted:** 2026-08-26T16:45:29.041Z  
 
 ```py
 # cook your dish here
-print("I ")
-print("love ")
+print("I")
+print("love")
 print("CodeChef")
 ```
 
