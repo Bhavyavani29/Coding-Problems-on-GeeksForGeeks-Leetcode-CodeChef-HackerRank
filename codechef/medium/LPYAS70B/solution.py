@@ -1,8 +1,7 @@
 # cook your dish here
-x, y, z = map(int, input().split())
-if(x < y and y < z):
-    print("Increasing")
-elif(x > y and y > z):
-    print("Decreasing")
+data = input().split()
+age, country = int(data[0]), data[1]
+if age >= 18 and country == "India":
+    print("Eligible")
 else:
-    print("Neither")
+    print("Not Eligible")
