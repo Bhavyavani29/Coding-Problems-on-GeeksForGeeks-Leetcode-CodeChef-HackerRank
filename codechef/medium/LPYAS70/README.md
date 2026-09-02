@@ -4,22 +4,68 @@
 
 ## Problem
 
-_Description not available._
+### Increase or Decrease
+
+Write a program that takes three space separated numbers as input and prints:
+
+- "Increasing" if the numbers are in strictly increasing order,
+- "Decreasing" if they are in strictly decreasing order,
+- and "Neither" otherwise.
+
+Check the sample input / output below for further clarity.
+
+### Sample 1:
+Input
+Output
+
+```
+20 30 41
+```
+
+```
+Increasing
+```
+
+### Sample 2:
+Input
+Output
+
+```
+50 30 20
+```
+
+```
+Decreasing
+```
+
+### Sample 3:
+Input
+Output
+
+```
+23 42 30
+```
+
+```
+Neither
+```
 
 ## Solution
 
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T08:52:39.553Z  
+**Submitted:** 2026-09-02T08:55:18.521Z  
 
 ```py
 # cook your dish here
-num = int(input())
-if(num % 3 == 0 and num % 5 == 0):
-    print("Divisible by both 3 and 5")
+x, y, z = map(int, input().split())
+if(x < y and y < z):
+    print("Increasing")
+elif(x > y and y > z):
+    print("Decreasing")
 else:
-    print("Not divisible by both 3 and 5")
+    print("Neither")
 ```
 
 ---
