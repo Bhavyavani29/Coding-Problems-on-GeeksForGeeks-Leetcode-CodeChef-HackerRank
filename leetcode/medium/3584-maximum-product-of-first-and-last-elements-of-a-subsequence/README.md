@@ -53,7 +53,7 @@ The subsequence `[5, 7]` has the largest product of the first and last elements.
 **Language:** Java  
 **Runtime:** 4 ms (beats 73.91%)  
 **Memory:** 150.4 MB (beats 78.26%)  
-**Submitted:** 2026-09-02T07:02:31.680Z  
+**Submitted:** 2026-09-02T08:43:15.212Z  
 
 ```java
 class Solution {
