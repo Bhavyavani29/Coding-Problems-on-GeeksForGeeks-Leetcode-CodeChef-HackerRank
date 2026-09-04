@@ -117,33 +117,17 @@ Now, among these $700$ users, $700$ couldn't solve any problem even though they 
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T16:39:56.596Z  
+**Submitted:** 2026-09-04T06:24:59.097Z  
 
-```java
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+```py
+n,a,b = map(int,input().split())
 
-
-class Codechef
-{
-	public static void main (String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		
-		// write your code here
-		int ratedUsers = n - a;
-		int highRatedUsers = n - a - b;
-		System.out.println(ratedUsers + " " + highRatedUsers);
-	}
-}
-
+# write your code here
+print(n - a)
+print((n - a) - b)
 ```
 
 ---
