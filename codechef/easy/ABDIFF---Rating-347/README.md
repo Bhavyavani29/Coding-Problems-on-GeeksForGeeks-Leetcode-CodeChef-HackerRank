@@ -66,19 +66,12 @@ The difference between these values is $1$.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T06:29:56.827Z  
+**Submitted:** 2026-09-04T06:28:15.413Z  
 
 ```py
-a,b = map(int,input().split())
-
+n = int(input())
 # write your code here
-x = a + b
-y = a * b
-if(y >= x):
-    print(y - x)
-else:
-    print(x - y)
-
+print((n * n) // 2)
 ```
 
 ---
