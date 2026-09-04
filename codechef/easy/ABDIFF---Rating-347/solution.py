@@ -1,9 +1,3 @@
-a,b = map(int,input().split())
-
+n = int(input())
 # write your code here
-x = a + b
-y = a * b
-if(y >= x):
-    print(y - x)
-else:
-    print(x - y)
+print((n * n) // 2)
