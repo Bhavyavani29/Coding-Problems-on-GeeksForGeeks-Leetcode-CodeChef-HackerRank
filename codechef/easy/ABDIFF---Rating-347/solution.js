@@ -1,16 +1,3 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-
-class Codechef
-{
-	public static void main (String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		// write your code here
-		int blackCells = (n * n) / 2;
-		System.out.println(blackCells);
-	}
-}
+n = int(input())
+# write your code here
+print((n * n) // 2)
