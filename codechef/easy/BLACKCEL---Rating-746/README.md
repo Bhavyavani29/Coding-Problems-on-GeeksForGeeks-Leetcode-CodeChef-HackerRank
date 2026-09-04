@@ -37,29 +37,15 @@ There are $32$ black cells and $32$ white cells in an $8 \times 8$ chessboard. S
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T16:43:09.622Z  
+**Submitted:** 2026-09-04T06:27:26.339Z  
 
-```java
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-
-class Codechef
-{
-	public static void main (String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		// write your code here
-		int blackCells = (n * n) / 2;
-		System.out.println(blackCells);
-	}
-}
-
+```py
+n = int(input())
+# write your code here
+print((n * n) // 2)
 ```
 
 ---
