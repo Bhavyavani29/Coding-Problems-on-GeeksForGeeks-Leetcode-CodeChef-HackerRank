@@ -1,4 +1,2 @@
-# Debug and fix the code
-str = input()
-n = len(str)
-print(str[n-1]) 
+a = 4 + 8
+print(a)
