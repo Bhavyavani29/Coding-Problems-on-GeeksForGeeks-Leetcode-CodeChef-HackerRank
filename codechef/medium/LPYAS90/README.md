@@ -63,7 +63,7 @@ Invalid choice
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-05T17:47:13.841Z  
+**Submitted:** 2026-09-05T17:48:19.447Z  
 
 ```py
 # Update the code below to debug the problem
@@ -71,7 +71,7 @@ choice = int(input())
 
 if choice == 1:
     print("Option 1 selected")
-elif choice == 1:
+elif choice == 2:
     print("Option 2 selected")
 elif choice == 3:
     print("Option 3 selected")
