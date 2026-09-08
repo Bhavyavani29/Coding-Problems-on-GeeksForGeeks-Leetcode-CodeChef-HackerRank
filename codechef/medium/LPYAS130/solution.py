@@ -1,6 +1,6 @@
-numbers = list(map(int, input().split()))
+values = list(map(int, input().split()))
 # Update your code below this line
-for i, num in enumerate(numbers):
-    if num == 8:
-        print(i)
-        break
+for i, num in enumerate(values):
+    if num > 10:
+        continue
+    print(num * num)
