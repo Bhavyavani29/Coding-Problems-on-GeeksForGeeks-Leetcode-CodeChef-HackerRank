@@ -45,33 +45,17 @@ Output
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-22T16:46:29.604Z  
+**Submitted:** 2026-09-10T16:47:45.911Z  
 
-```java
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-
-class Codechef
-{
-	public static void main (String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
-		while(t-->0)
-		{
-    		int x = sc.nextInt();
-    		// write your code here
-    		System.out.println(x * 15);
-		}
-		
-	}
-}
-
+```py
+t = int(input())
+for i in range(0,t):
+    x = int(input())
+    # write your code here
+    print(x * 15)
 ```
 
 ---
