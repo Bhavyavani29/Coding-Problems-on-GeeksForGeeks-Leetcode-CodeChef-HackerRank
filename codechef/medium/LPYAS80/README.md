@@ -4,25 +4,25 @@
 
 ## Problem
 
-_Description not available._
+### Tuple Reverse
+
+Write a Python program that reverse the given tuple and print its values.
+
+ **Given tuple in code editor:**  (1, 2, 3, 4, 5)
+ **Expected Output:**  (5, 4, 3, 2, 1)
 
 ## Solution
 
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-12T17:45:48.986Z  
+**Submitted:** 2026-09-12T17:46:10.674Z  
 
 ```py
-# Given dictionary
-student_grades = {"Alice": 85, "Bob": 72, "Charlie": 90, "David": 65, "Eva": 88, "John": 45}
-
 # Solution
-name = input()
-if name in student_grades:
-    print(student_grades[name])
-else:
-    print("Not Found")
+tup = (1, 2, 3, 4, 5)
+print(tup[::-1])
+
 ```
 
 ---
