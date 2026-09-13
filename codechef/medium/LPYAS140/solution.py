@@ -1,11 +1,12 @@
-def calculate_power(base, exponent):
-    #write your code here
-    return base ** exponent
+def calculate_area(length, width):
+    # Write your code here
+    return length * width
+    
     
 def main():
-    base, exponent = map(int, input().split())
-    result = calculate_power(base, exponent)
-    print(result)
+    length, width = map(int, input().split())
+    area = calculate_area(length, width)
+    print(area)
 
 
 main()
