@@ -4,24 +4,39 @@
 
 ## Problem
 
-_Description not available._
+### Calculate area
+
+Develop a function to compute and return the area of a rectangle, given its length and width
+
+### Sample 1:
+Input
+Output
+
+```
+5 8
+```
+
+```
+40
+```
 
 ## Solution
 
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-13T16:51:35.511Z  
+**Submitted:** 2026-09-13T16:51:59.293Z  
 
 ```py
-def calculate_power(base, exponent):
-    #write your code here
-    return base ** exponent
+def calculate_area(length, width):
+    # Write your code here
+    return length * width
+    
     
 def main():
-    base, exponent = map(int, input().split())
-    result = calculate_power(base, exponent)
-    print(result)
+    length, width = map(int, input().split())
+    area = calculate_area(length, width)
+    print(area)
 
 
 main()
