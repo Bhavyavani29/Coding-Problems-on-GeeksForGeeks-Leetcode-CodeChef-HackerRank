@@ -4,27 +4,45 @@
 
 ## Problem
 
-_Description not available._
+### Increase the integer
+
+Write a program that takes an integer  **T**  for number of test cases as input, then for each test case reads an integer  **N**  on next  **T**  lines, and prints  **N + 1**  for each test case.
+
+### Sample 1:
+Input
+Output
+
+```
+3
+4
+2
+-1
+```
+
+```
+5
+3
+0
+```
+
+### Explanation:
+
+The first integer $3$ denotes the number of test cases, $T$. Next $3$ integers $4$, $2$ and $-1$ are the values of $N$ for each test case.
 
 ## Solution
 
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T16:18:55.350Z  
+**Submitted:** 2026-09-14T16:19:00.844Z  
 
 ```py
-def is_even(num):
-    return num % 2 == 0
-
 def main():
     t = int(input())
-    for _ in range(t):
-        num = int(input())
-        if is_even(num):
-            print("Even")
-        else:
-            print("Odd")
+    while t > 0:
+        N = int(input())
+        print(N + 1)
+        t -= 1
 
 if __name__ == "__main__":
     main()
