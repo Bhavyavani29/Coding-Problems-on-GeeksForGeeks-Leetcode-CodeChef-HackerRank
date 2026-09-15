@@ -30,7 +30,7 @@ There are four possible ways. {5,5,5,5}, {3,3,3,3,3,5}, {10,10}, {5,5,10}.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-15T16:27:34.666Z  
+**Submitted:** 2026-09-15T16:28:14.141Z  
 
 ```java
 class Solution {
