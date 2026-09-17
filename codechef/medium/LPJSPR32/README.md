@@ -4,20 +4,35 @@
 
 ## Problem
 
-_Description not available._
+### Print total minutes and seconds
+
+Declare a variable  **hour**  and initialize it with the value $5$ Then, calculate and print the total number of minutes and seconds present in this hour.
+
+### Sample 1:
+Input
+Output
+
+```
+
+```
+
+```
+300
+18000
+```
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-17T17:27:50.116Z  
+**Submitted:** 2026-09-17T17:28:52.148Z  
 
 ```js
 // your code goes here
-let temperature = 25.5;
-console.log("Celsius - ", temperature);
-console.log("Kelvin - ", temperature + 273);
+let hour = 5;
+console.log(5 * 60);
+console.log(5 * 60 * 60);
 ```
 
 ---
