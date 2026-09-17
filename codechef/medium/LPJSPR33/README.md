@@ -4,20 +4,35 @@
 
 ## Problem
 
-_Description not available._
+### Convert speed
+
+Create a variable named  **speed1**  and assign it the value 36, representing speed in kilometers per hour. Then, convert and display this speed in meters per second.
+
+[ **Note:**  1 km/h = 5/18 m/s]
+
+### Sample 1:
+Input
+Output
+
+```
+
+```
+
+```
+10
+```
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-17T17:29:00.102Z  
+**Submitted:** 2026-09-17T17:29:46.612Z  
 
 ```js
 // your code goes here
-let hour = 5;
-console.log(5 * 60);
-console.log(5 * 60 * 60);
+let speed1 = 36;
+console.log(36 * (5 / 18));
 ```
 
 ---
