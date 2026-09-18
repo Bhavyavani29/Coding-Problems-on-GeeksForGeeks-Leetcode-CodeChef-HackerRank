@@ -4,37 +4,20 @@
 
 ## Problem
 
-### Convert Temperature
-
-Declare a variable  **"temperature"**  and initialise it with a value of  **25.5**  $($in Celsius$)$ and Print it in Celsius and Kelvin $($add $273$ to temperature in Celsius$).$
-
-$[$ **Important Note:**  Follow the output format exactly as given, with a single space between words, characters, and numbers$.]$
-
-### Sample 1:
-Input
-Output
-
-```
-
-```
-
-```
-Celsius - 25.5
-Kelvin - 298.5
-```
+_Description not available._
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-17T17:27:48.259Z  
+**Submitted:** 2026-09-17T17:25:46.103Z  
 
 ```js
 // your code goes here
-let temperature = 25.5;
-console.log("Celsius - ", temperature);
-console.log("Kelvin - ", temperature + 273);
+let a = 30;
+let b = 10;
+console.log(a / b);
 ```
 
 ---
