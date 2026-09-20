@@ -4,34 +4,26 @@
 
 ## Problem
 
-### Adding the length
-
-Create a program to calculate and display the total length of two specified words:  **Naruto**  and  **Sasuke**.
-
-### Sample 1:
-Input
-Output
-
-```
-
-```
-
-```
-12
-```
+_Description not available._
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-20T16:45:23.901Z  
+**Submitted:** 2026-09-20T16:44:42.581Z  
 
 ```js
-let word1 = 'Naruto';
-let word2 = 'Sasuke';
-total = word1.length + word2.length;
-console.log(total);
+// complete the following code
+
+let one = 'Coding';
+let two = 'on';
+let three = 'CodeChef';
+let combination = one + ' ' + two + ' ' + three;
+console.log(one + ' - ' + one.length);
+console.log(two + ' - ' + two.length);
+console.log(three + ' - ' + three.length);
+console.log(combination + ' - ' + combination.length);
 ```
 
 ---
