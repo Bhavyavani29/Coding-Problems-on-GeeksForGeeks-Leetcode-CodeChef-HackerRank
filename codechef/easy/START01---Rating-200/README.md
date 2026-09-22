@@ -52,15 +52,26 @@ The input is 15. So the output is also 15.
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-30T16:32:11.581Z  
+**Submitted:** 2026-09-22T17:10:29.740Z  
 
-```py
-# cook your dish here
-num = int(input())
-print(num)
+```js
+// Solution
+
+function numberMirror(n){
+    console.log(n);
+}
+
+// Input related code. Please do not change this.
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+   const n = parseInt(input.trim()); 
+   numberMirror(n);
+});
+
+
 ```
 
 ---
