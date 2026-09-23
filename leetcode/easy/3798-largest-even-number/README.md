@@ -53,8 +53,8 @@ There is no way to get an even number.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 59.39%)  
-**Memory:** 44 MB (beats 43.03%)  
-**Submitted:** 2026-09-23T17:04:45.546Z  
+**Memory:** 43.7 MB (beats 88.00%)  
+**Submitted:** 2026-09-23T17:06:22.703Z  
 
 ```java
 class Solution {
