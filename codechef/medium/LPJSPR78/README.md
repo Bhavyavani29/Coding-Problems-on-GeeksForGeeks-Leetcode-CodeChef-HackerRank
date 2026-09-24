@@ -25,7 +25,7 @@ Leap year
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T16:45:16.652Z  
+**Submitted:** 2026-09-24T16:48:21.450Z  
 
 ```js
 let year = parseInt(inputChar);
