@@ -27,7 +27,7 @@ prime number
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T16:44:19.701Z  
+**Submitted:** 2026-09-24T16:48:03.950Z  
 
 ```js
 let x = parseInt(inputChar);
