@@ -31,7 +31,7 @@ Positive
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T16:43:55.223Z  
+**Submitted:** 2026-09-24T16:47:36.295Z  
 
 ```js
   let x = parseInt(inputChar);
