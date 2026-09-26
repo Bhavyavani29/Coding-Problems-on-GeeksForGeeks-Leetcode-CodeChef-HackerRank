@@ -4,32 +4,67 @@
 
 ## Problem
 
-_Description not available._
+### Arithmetic operation
+
+Write a program that takes an operator (+, -, *, /) as input.
+
+Use a 'switch' statement to return the name of corresponding arithmetic operation among  **Addition**, **Subtraction**, **Multiply**  and  **Divide**.
+
+Check the sample input / output below for clarity.
+
+### Sample 1:
+Input
+Output
+
+```
+-
+```
+
+```
+Subtraction
+```
+
+### Sample 2:
+Input
+Output
+
+```
+/
+```
+
+```
+Divide
+```
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-26T17:22:57.638Z  
+**Submitted:** 2026-09-26T17:23:06.932Z  
 
 ```js
-const inputChar = input.trim().toLowerCase();
+const inputChar = input.trim();
 
-let result;
+let operation;
 switch (inputChar) {
-    case 'a':
-    case 'e':
-    case 'i':
-    case 'o':
-    case 'u':
-        result = "Vowel";
+    case '+':
+        operation = "Addition";
+        break;
+    case '-':
+        operation = "Subtraction";
+        break;
+    case '*':
+        operation = "Multiply";
+        break;
+    case '/':
+        operation = "Divide";
         break;
     default:
-        result = "Consonant";
+        operation = "Invalid operator";
 }
 
-console.log(result);
+console.log(operation);
 ```
 
 ---
