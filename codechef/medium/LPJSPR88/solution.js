@@ -1,16 +1,21 @@
-const inputChar = input.trim().toLowerCase();
+const inputChar = input.trim();
 
-let result;
+let operation;
 switch (inputChar) {
-    case 'a':
-    case 'e':
-    case 'i':
-    case 'o':
-    case 'u':
-        result = "Vowel";
+    case '+':
+        operation = "Addition";
+        break;
+    case '-':
+        operation = "Subtraction";
+        break;
+    case '*':
+        operation = "Multiply";
+        break;
+    case '/':
+        operation = "Divide";
         break;
     default:
-        result = "Consonant";
+        operation = "Invalid operator";
 }
 
-console.log(result);
+console.log(operation);
