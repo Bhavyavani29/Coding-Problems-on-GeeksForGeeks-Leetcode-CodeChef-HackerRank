@@ -4,31 +4,72 @@
 
 ## Problem
 
-_Description not available._
+### Which Day It Is
+
+Debug the code in the IDE to solve the problem.
+
+The code is supposed to do the following:
+
+- Take a character as input.
+- If its between 1 - 7, prints the corresponding day of the week.
+- Else print, Invalid input. Check the sample test case.
+### Sample 1:
+Input
+Output
+
+```
+5
+```
+
+```
+Friday
+```
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-27T15:59:16.403Z  
+**Submitted:** 2026-09-27T15:59:38.577Z  
 
 ```js
 const choice = input.trim();
-
-switch (choice) {
+let day;
+     
+  switch (choice) {
     case '1':
-        console.log('Option 1 selected');
-        break;
+      day = "Monday";
+      break;
     case '2':
-        console.log('Option 2 selected');
-        break;
+      day = "Tuesday";
+      break;
     case '3':
-        console.log('Option 3 selected');
-        break;
+      day = "Wednesday";
+      break;
+    case '4':
+      day = "Thursday";
+      break;
+    case '5':
+      day = "Friday";
+      break;
+    case '6':
+      day = "Saturday";
+      break;
+    case '7':
+      day = "Sunday";
+      break;
     default:
-        console.log('Invalid choice');
-}
+      day = null; // Handle invalid input
+      break;
+  }
+
+  // Printing the result
+  if (day) {
+    console.log(day);
+  } else {
+    console.log("Invalid input");
+  }
+   
 ```
 
 ---
