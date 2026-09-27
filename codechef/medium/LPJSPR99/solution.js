@@ -1,15 +1,37 @@
 const choice = input.trim();
-
-switch (choice) {
+let day;
+     
+  switch (choice) {
     case '1':
-        console.log('Option 1 selected');
-        break;
+      day = "Monday";
+      break;
     case '2':
-        console.log('Option 2 selected');
-        break;
+      day = "Tuesday";
+      break;
     case '3':
-        console.log('Option 3 selected');
-        break;
+      day = "Wednesday";
+      break;
+    case '4':
+      day = "Thursday";
+      break;
+    case '5':
+      day = "Friday";
+      break;
+    case '6':
+      day = "Saturday";
+      break;
+    case '7':
+      day = "Sunday";
+      break;
     default:
-        console.log('Invalid choice');
-}
+      day = null; // Handle invalid input
+      break;
+  }
+
+  // Printing the result
+  if (day) {
+    console.log(day);
+  } else {
+    console.log("Invalid input");
+  }
+   
