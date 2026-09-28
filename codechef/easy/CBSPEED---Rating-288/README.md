@@ -93,18 +93,32 @@ Chef's current brain speed of $8$ bps is not greater than the threshold of $53$ 
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-03T16:01:45.810Z  
+**Submitted:** 2026-09-28T17:24:35.757Z  
 
-```py
-x,y = map(int,input().split())
-# write your code here
-if(x >= y):
-    print("No")
-else:
-    print("YES")
+```js
+// Solution
+
+function isErrorProne(x, y){
+    if(x < y){
+        console.log("YES");
+    } else {
+        console.log("NO");
+    }
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const nums = input.trim().split(' ');
+  const x = parseInt(nums[0]); 
+  const y = parseInt(nums[1]); 
+  isErrorProne(x, y);
+});
+
+
 ```
 
 ---
