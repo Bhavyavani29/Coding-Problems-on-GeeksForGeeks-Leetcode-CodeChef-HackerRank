@@ -63,15 +63,34 @@ The difference between these values is $1$.
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T06:28:15.413Z  
+**Submitted:** 2026-09-28T17:25:21.421Z  
 
-```py
-n = int(input())
-# write your code here
-print((n * n) // 2)
+```js
+// Solution
+
+function abDifference(a, b){
+    let sum = a + b;
+    let product = a * b;
+    if(product > sum){
+        console.log(product - sum);
+    } else{
+        console.log(sum - product);
+    }
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const nums = input.trim().split(' ');
+  const a = parseInt(nums[0]); 
+  const b = parseInt(nums[1]); 
+  abDifference(a, b);
+});
+
+
 ```
 
 ---
