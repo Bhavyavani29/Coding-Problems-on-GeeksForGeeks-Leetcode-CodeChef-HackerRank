@@ -117,17 +117,27 @@ Now, among these $700$ users, $700$ couldn't solve any problem even though they 
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T06:24:59.097Z  
+**Submitted:** 2026-09-28T17:24:55.606Z  
 
-```py
-n,a,b = map(int,input().split())
+```js
+// Solution
 
-# write your code here
-print(n - a)
-print((n - a) - b)
+function solve(n, a, b){
+    console.log(n - a, n - a - b);
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const nums = input.trim().split(' ');
+  const n = parseInt(nums[0]); 
+  const a = parseInt(nums[1]); 
+  const b = parseInt(nums[2]); 
+  solve(n, a, b);
+});
 ```
 
 ---
