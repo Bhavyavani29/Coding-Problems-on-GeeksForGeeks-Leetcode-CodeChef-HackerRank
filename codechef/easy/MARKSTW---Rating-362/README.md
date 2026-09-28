@@ -52,19 +52,31 @@ Alice has scored $X = 1$ mark whereas Bob has scored $Y = 2$ marks. As Alice has
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-03T16:06:10.074Z  
+**Submitted:** 2026-09-28T17:24:20.920Z  
 
-```py
-x,y = map(int,input().split())
+```js
+// Solution
 
-# write your code here
-if(x >= 2 * y):
-    print("YES")
-else:
-    print("NO")
+function isAliceHappy(x, y){
+    if(x >= 2 * y){
+        console.log("Yes");
+    } else{
+        console.log("No");
+    }
+}
+
+// Input related code. Please do not change this.
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const nums = input.trim().split(' ');
+  const x = parseInt(nums[0]); 
+  const y = parseInt(nums[1]); 
+  isAliceHappy(x, y);
+});
+
 ```
 
 ---
