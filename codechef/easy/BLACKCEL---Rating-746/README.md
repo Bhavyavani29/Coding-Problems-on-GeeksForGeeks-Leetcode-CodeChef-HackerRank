@@ -37,15 +37,26 @@ There are $32$ black cells and $32$ white cells in an $8 \times 8$ chessboard. S
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T06:27:26.339Z  
+**Submitted:** 2026-09-28T17:25:09.321Z  
 
-```py
-n = int(input())
-# write your code here
-print((n * n) // 2)
+```js
+// Solution
+
+function totalBlackCells(n){
+    console.log(n * n / 2);
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function (input) {
+   let n = parseInt(input); 
+   totalBlackCells(n);
+});
+
+
 ```
 
 ---
