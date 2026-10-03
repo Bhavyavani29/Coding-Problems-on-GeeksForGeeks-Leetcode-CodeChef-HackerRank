@@ -96,15 +96,28 @@ There are initially $100$ rows, and $100$ columns. So the initial number of cell
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-31T17:19:39.265Z  
+**Submitted:** 2026-10-03T16:46:58.506Z  
 
-```py
-# cook your dish here
-R, C, E = map(int, input().split())
-print((R + E) * C)
+```js
+// Solution 
+
+function totalCells(r, c, e){
+    console.log((r + e) * c);
+}
+
+// Input related code. Please do not change this.
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const nums = input.trim().split(' ');
+  const r = parseInt(nums[0]); 
+  const c = parseInt(nums[1]); 
+  const e = parseInt(nums[2]); 
+  totalCells(r, c, e);
+});
+
 ```
 
 ---
