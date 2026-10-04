@@ -15,7 +15,7 @@ Debug the Following Code to print summation of lengths of the three given arrays
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-29T18:02:14.435Z  
+**Submitted:** 2026-10-04T15:56:30.142Z  
 
 ```js
 // Corrected code to calculate the summation of lengths of arrays a, b, and c
