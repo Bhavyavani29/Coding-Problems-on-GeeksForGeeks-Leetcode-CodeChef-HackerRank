@@ -13,7 +13,7 @@ Write a program to declare and initialise an array of strings and print the leng
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-29T18:02:00.477Z  
+**Submitted:** 2026-10-04T15:56:14.539Z  
 
 ```js
 const array = ["Code", "Chef", "C"];
