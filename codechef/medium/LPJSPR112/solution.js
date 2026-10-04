@@ -1,11 +1,14 @@
-let n = parseInt(inputChar);
+// Corrected code to calculate the summation of lengths of arrays a, b, and c
 
-let largest_even = n;
-let largest_odd = n - 1;
+// Define arrays a, b, and c
+let a = [1, 2, 3];
+let b = [4, 5, 6];
+let c = [7, 8, 9, ...b]; // Spread operator to combine b into c
 
-if (n % 2 !== 0) {
-    largest_even = n - 1;
-    largest_odd = n;
-}
+// Calculate lengths of arrays
+let lengthA = a.length;
+let lengthB = b.length;
+let lengthC = c.length;
 
-console.log(largest_even - largest_odd);
+// Print the summation of lengths
+console.log(lengthA + lengthB + lengthC);
