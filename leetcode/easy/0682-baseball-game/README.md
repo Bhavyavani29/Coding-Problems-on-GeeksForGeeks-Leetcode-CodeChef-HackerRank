@@ -77,8 +77,8 @@ Since the record is empty, the total sum is 0.
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 94.12%)  
-**Memory:** 43.4 MB (beats 65.79%)  
-**Submitted:** 2026-10-04T16:32:30.807Z  
+**Memory:** 43.7 MB (beats 29.70%)  
+**Submitted:** 2026-10-04T16:33:23.365Z  
 
 ```java
 class Solution {
