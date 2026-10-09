@@ -56,20 +56,35 @@ YES
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T10:18:33.535Z  
+**Submitted:** 2026-10-09T16:25:52.655Z  
 
-```py
-t = int(input())
-for i in range(0,t):
-    x,y = map(int,input().split())
-    # write your code here
-    if(x + y > 6):
-        print("YES")
-    else:
-        print("NO")
+```js
+// Solution
+
+function isGoodTurn(tests){
+   let t = parseInt(tests[0]);
+   for(let i = 1; i <= t; i++){
+       const nums = tests[i].split(' '); // nums array stores A and B
+       let a = parseInt(nums[0]);
+       let b = parseInt(nums[1]);
+       if(a + b > 6) {
+          console.log("YES");
+       } else {
+          console.log("NO");
+       }
+   }
+   
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const tests = input.split('\n');
+  isGoodTurn(tests);
+});
 ```
 
 ---
