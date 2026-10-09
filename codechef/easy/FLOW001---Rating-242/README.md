@@ -43,17 +43,31 @@ Output
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T10:17:11.343Z  
+**Submitted:** 2026-10-09T16:25:29.056Z  
 
-```py
-t = int(input())
-for i in range(0,t):
-    a,b = map(int,input().split())
-    # write your code here
-    print(a + b)
+```js
+// Solution
+
+function addTwoNumbers(tests){
+  let t = parseInt(tests[0]);
+  for(let i = 1; i <= t; i++){
+    const nums = tests[i].split(' ');
+    let a = parseInt(nums[0]);
+    let b = parseInt(nums[1]);
+    console.log(a + b);
+  }
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const tests = input.split('\n');
+  addTwoNumbers(tests);
+});
+
 ```
 
 ---
