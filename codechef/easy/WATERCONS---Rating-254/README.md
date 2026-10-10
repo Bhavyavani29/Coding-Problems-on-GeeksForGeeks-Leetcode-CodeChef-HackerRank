@@ -51,20 +51,32 @@ YES
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T10:19:31.944Z  
+**Submitted:** 2026-10-10T15:15:24.250Z  
 
-```py
-t = int(input())
-for i in range(0,t):
-    x =  int(input())
-    # write your code here
-    if(x >= 2000):
-        print("YES")
-    else:
-        print("NO")
+```js
+// Solution
+
+function checkWaterConsumption(tests){
+  let t = parseInt(tests[0]);
+  for(let i = 1; i <= t; i++){
+    const x = parseInt(tests[i].trim());
+    if(x >= 2000){
+        console.log("YES");
+    } else{
+        console.log("NO");
+    }
+  }
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const tests = input.split('\n');
+  checkWaterConsumption(tests);
+});
 ```
 
 ---
