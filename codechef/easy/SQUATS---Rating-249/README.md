@@ -45,17 +45,28 @@ Output
 
 ## Solution
 
-**Language:** Python  
+**Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-10T16:47:45.911Z  
+**Submitted:** 2026-10-11T17:16:10.709Z  
 
-```py
-t = int(input())
-for i in range(0,t):
-    x = int(input())
-    # write your code here
-    print(x * 15)
+```js
+// Solution
+
+function totalSquats(tests){
+  let t = parseInt(tests[0]);
+  for(let i = 1; i <= t; i++){
+    const x = parseInt(tests[i].trim());
+    console.log(x * 15);
+  }
+}
+
+// Input related code. Please do not change. 
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(input) {
+  const tests = input.split('\n');
+  totalSquats(tests)
+});
 ```
 
 ---
