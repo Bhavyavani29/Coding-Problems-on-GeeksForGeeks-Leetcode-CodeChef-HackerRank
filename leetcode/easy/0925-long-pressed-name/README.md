@@ -38,9 +38,9 @@ Explanation: 'e' must have been pressed twice, but it was not in the typed outpu
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 86.19%)  
-**Memory:** 43.2 MB (beats 5.24%)  
-**Submitted:** 2026-10-13T16:13:18.220Z  
+**Runtime:** 0 ms  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-10-13T16:15:33.569Z  
 
 ```java
 class Solution {
@@ -48,7 +48,7 @@ class Solution {
         int i = 0;
         int j = 0;
         while (j < typed.length()) {
-            if (i < name.length() && name.charAt(i) == typed.charAt(j)) {
+            if (i <= name.length() && name.charAt(i) == typed.charAt(j)) {
                 i++;
                 j++;
             } 
@@ -59,7 +59,8 @@ class Solution {
                 return false;
             }
         }
-        return i == name.length();
+        //return i == name.length();
+        return true;
     }
 }
 ```
