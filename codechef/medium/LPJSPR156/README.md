@@ -4,40 +4,29 @@
 
 ## Problem
 
-### Calculate area
-
-Develop a function to compute and return the area of a square, given its side.
-
-### Sample 1:
-Input
-Output
-
-```
-3
-```
-
-```
-9
-```
+_Description not available._
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T15:49:12.666Z  
+**Submitted:** 2026-10-14T16:26:34.395Z  
 
 ```js
-const side = parseInt(input);
-    
-// Function to calculate area
-function calculateArea(side) {
-    // Implement this function
-    return side * side;
+const base = parseInt(input);
+
+// Function to calculate power
+function calculatePower(base) {
+    let ans = 1;
+    for (let i = 0; i < 10; i++) {
+        ans *= base;
+    }
+    return ans;
 }
 
-console.log(calculateArea(side));
-  
+
+console.log(calculatePower(base));
 ```
 
 ---
