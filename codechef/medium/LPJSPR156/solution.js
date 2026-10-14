@@ -1,10 +1,13 @@
-const side = parseInt(input);
-    
-// Function to calculate area
-function calculateArea(side) {
-    // Implement this function
-    return side * side;
+const base = parseInt(input);
+
+// Function to calculate power
+function calculatePower(base) {
+    let ans = 1;
+    for (let i = 0; i < 10; i++) {
+        ans *= base;
+    }
+    return ans;
 }
 
-console.log(calculateArea(side));
-  
+
+console.log(calculatePower(base));
