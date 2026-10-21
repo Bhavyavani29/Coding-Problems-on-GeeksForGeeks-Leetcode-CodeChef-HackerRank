@@ -32,7 +32,7 @@ Explanation: There is no majority element.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T17:20:37.128Z  
+**Submitted:** 2026-10-21T17:23:50.386Z  
 
 ```java
 class Solution {
