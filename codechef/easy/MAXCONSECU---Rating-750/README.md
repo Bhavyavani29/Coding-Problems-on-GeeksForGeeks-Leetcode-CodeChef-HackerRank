@@ -50,22 +50,22 @@ The two `1`s at positions 2 and 3 are consecutive, so the maximum streak is `2`.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-30T05:59:16.677Z  
+**Submitted:** 2026-10-30T06:06:24.174Z  
 
 ```java
     public static int findMaxConsecutiveOnes(int[] nums) {
        //write code here...
-       int currStreak = 0, minStreak = 0;
+       int currStreak = 0, maxStreak = 0;
        for(int i = 0;i < nums.length;i++){
            if(nums[i] == 1){
                currStreak++;
-               minStreak = Math.max(currStreak, minStreak);
+               maxStreak = Math.max(currStreak, maxStreak);
            }
            else{
                currStreak = 0;
            }
        }
-       return minStreak;
+       return maxStreak;
     }
 
 ```
