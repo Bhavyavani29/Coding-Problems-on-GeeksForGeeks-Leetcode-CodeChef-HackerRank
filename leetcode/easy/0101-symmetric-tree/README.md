@@ -1,0 +1,79 @@
+# Symmetric Tree
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+Given the `root` of a binary tree,  *check whether it is a mirror of itself*  (i.e., symmetric around its center).
+
+ 
+
+ **Example 1:** 
+
+```
+Input: root = [1,2,2,3,4,4,3]
+Output: true
+
+```
+
+ **Example 2:** 
+
+```
+Input: root = [1,2,2,null,3,null,3]
+Output: false
+
+```
+
+ 
+
+ **Constraints:** 
+
+- The number of nodes in the tree is in the range [1, 1000].
+- -100 <= Node.val <= 100
+
+ 
+
+ **Follow up:**  Could you solve it both recursively and iteratively?
+
+## Solution
+
+**Language:** Java  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.1 MB (beats 81.67%)  
+**Submitted:** 2026-11-09T16:28:43.687Z  
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+         return isMirror(root.left, root.right);
+    }
+    private boolean isMirror(TreeNode n1, TreeNode n2) {
+        if (n1 == null && n2 == null) {
+            return true;
+        }   
+        if (n1 == null || n2 == null) {
+            return false;
+        }
+        return n1.val == n2.val && isMirror(n1.left, n2.right) && isMirror(n1.right, n2.left);
+    }
+}
+```
+
+---
+
+[View on LeetCode](https://leetcode.com/problems/symmetric-tree/)
