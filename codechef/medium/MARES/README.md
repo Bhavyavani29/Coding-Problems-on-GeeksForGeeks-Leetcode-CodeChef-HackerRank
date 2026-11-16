@@ -83,7 +83,7 @@ After considering the border, the main diagonal and its adjacent diagonals, and 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-16T14:12:40.576Z  
+**Submitted:** 2026-11-16T14:13:04.735Z  
 
 ```java
 import java.io.*;
