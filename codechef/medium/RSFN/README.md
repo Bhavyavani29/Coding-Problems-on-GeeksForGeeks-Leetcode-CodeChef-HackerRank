@@ -4,128 +4,128 @@
 
 ## Problem
 
-### Matrix Region Sum
+### Fibonacci Numbers Range Sum
 
-You are given an $N \times N$ integer matrix A and an integer $K$.
+You are given an array $I$ of $N$ positive integers.
 
-Consider the following regions of the matrix:
+For each position $i$, replace $I_i$ conceptually with the $I_i$-th Fibonacci number. The Fibonacci sequence is defined as $F_1=1$, $F_2=1$, and $F_i=F_{i-1}+F_{i-2}$ for $i\ge3$.
 
-- the main diagonal together with the diagonals immediately above and below it;
-- the border of the matrix, consisting of all cells in the first row, last row, first column, or last column;
-- the central $K \times K$ submatrix.
+You are then given $Q$ queries. Each query specifies a range $[L,R]$ and asks for the sum of the Fibonacci values corresponding to all array elements from position $L$ to $R$, inclusive.
 
-The central submatrix is positioned exactly at the center of the matrix. It is guaranteed that $N-K$ is even, so this submatrix is uniquely defined.
+For each query $[L,R]$, find:
 
-A matrix cell may belong to more than one of these regions. Such a cell must be  **counted only once**  in the total sum.
+$F_{I_L}+F_{I_{L+1}}+\cdots+F_{I_R}$
 
-Find the sum of all matrix elements that belong to at least one of the three regions.
+Since the sum can be large, print the answer modulo $10^9+7$.
 
 ### Input Format
 
-The first line contains two space-separated integers $N$ and $K$ — the size of the matrix and the size of the central submatrix.
+The first line contains two space-separated integers $N$ and $Q$ — the size of the array and the number of queries.
 
-Each of the next $N$ lines contains $N$ space-separated integers representing the matrix.
+The second line contains $N$ space-separated integers $I_1,I_2,\ldots,I_N$.
+
+Each of the next $Q$ lines contains two space-separated integers $L$ and $R$, representing a  **1-based inclusive range**.
 
 ### Output Format
 
-Print a single integer — the sum of all elements belonging to at least one of the specified regions.
+For each query, print the required Fibonacci sum modulo $10^9+7$ on a separate line.
 
 ### Constraints
-- $1 \le K \le N \le 100$
-- $N-K$ is even
-- $-10^3 \le A_{i,j} \le 10^3$
+- $1 \le N,Q \le 10^5$
+- $1 \le I_i \le 10^5$
+- $1 \le L \le R \le N$
 ### Sample 1:
 Input
 Output
 
 ```
-3 1
-1 1 1
-1 1 1
-1 1 1
-```
-
-```
-9
-```
-
-### Explanation:
-
-Every cell belongs to at least one of the specified regions.
-
-Since each element is `1`, the required sum is `9`.
-
-### Sample 2:
-Input
-Output
-
-```
-5 1
+5 2
 1 2 3 4 5
-6 7 8 9 10
-11 12 13 14 15
-16 17 18 19 20
-21 22 23 24 25
+2 4
+1 5
 ```
 
 ```
-299
+6
+12
 ```
 
 ### Explanation:
 
-The central submatrix consists only of the middle element `13`.
+The Fibonacci values corresponding to the array are:
 
-After considering the border, the main diagonal and its adjacent diagonals, and the central submatrix, while counting every cell only once, the total sum is `299`.
+`1 1 2 3 5`
+
+For the first query, the required sum is:
+
+$1+2+3=6$
+
+For the second query, the required sum is:
+
+$1+1+2+3+5=12$
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-16T14:13:19.754Z  
+**Submitted:** 2026-11-18T11:32:30.996Z  
 
 ```java
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    static final int MOD = 1000000007;
+
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
+        String line = br.readLine();
+        if (line == null) return;
+        StringTokenizer st = new StringTokenizer(line);
         int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        int Q = Integer.parseInt(st.nextToken());
 
-        int start = (N - K) / 2;
-        int end = start + K - 1;
-
-        long sum = 0;
-
+        int[] I = new int[N];
+        int maxI = 2;
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-
-            for (int j = 0; j < N; j++) {
-                int x = Integer.parseInt(st.nextToken());
-
-                boolean border =
-                    i == 0 || i == N - 1 || j == 0 || j == N - 1;
-
-                boolean diagonal =
-                    Math.abs(i - j) <= 1;
-
-                boolean central =
-                    i >= start && i <= end &&
-                    j >= start && j <= end;
-
-                if (border || diagonal || central) {
-                    sum += x;
-                }
-            }
+            I[i] = Integer.parseInt(st.nextToken());
+            if (I[i] > maxI) maxI = I[i];
         }
 
-        System.out.println(sum);
+        // 1. Precompute Fibonacci numbers
+        int[] F = new int[maxI + 1];
+        F[1] = 1;
+        if (maxI >= 2) F[2] = 1;
+        for (int i = 3; i <= maxI; i++) {
+            int val = F[i - 1] + F[i - 2];
+            if (val >= MOD) val -= MOD;
+            F[i] = val;
+        }
+
+        // 2. Build Prefix Sums
+        int[] P = new int[N + 1];
+        for (int i = 0; i < N; i++) {
+            int val = P[i] + F[I[i]];
+            if (val >= MOD) val -= MOD;
+            P[i + 1] = val;
+        }
+
+        // 3. Answer queries
+        StringBuilder sb = new StringBuilder();
+        for (int q = 0; q < Q; q++) {
+            st = new StringTokenizer(br.readLine());
+            int L = Integer.parseInt(st.nextToken());
+            int R = Integer.parseInt(st.nextToken());
+            int ans = P[R] - P[L - 1];
+            if (ans < 0) ans += MOD;
+            sb.append(ans).append("\n");
+        }
+
+        System.out.print(sb.toString());
     }
 }
 ```
