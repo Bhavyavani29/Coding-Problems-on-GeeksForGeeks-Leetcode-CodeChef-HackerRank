@@ -1,42 +1,56 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    static final int MOD = 1000000007;
+
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
+        String line = br.readLine();
+        if (line == null) return;
+        StringTokenizer st = new StringTokenizer(line);
         int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        int Q = Integer.parseInt(st.nextToken());
 
-        int start = (N - K) / 2;
-        int end = start + K - 1;
-
-        long sum = 0;
-
+        int[] I = new int[N];
+        int maxI = 2;
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-
-            for (int j = 0; j < N; j++) {
-                int x = Integer.parseInt(st.nextToken());
-
-                boolean border =
-                    i == 0 || i == N - 1 || j == 0 || j == N - 1;
-
-                boolean diagonal =
-                    Math.abs(i - j) <= 1;
-
-                boolean central =
-                    i >= start && i <= end &&
-                    j >= start && j <= end;
-
-                if (border || diagonal || central) {
-                    sum += x;
-                }
-            }
+            I[i] = Integer.parseInt(st.nextToken());
+            if (I[i] > maxI) maxI = I[i];
         }
 
-        System.out.println(sum);
+        // 1. Precompute Fibonacci numbers
+        int[] F = new int[maxI + 1];
+        F[1] = 1;
+        if (maxI >= 2) F[2] = 1;
+        for (int i = 3; i <= maxI; i++) {
+            int val = F[i - 1] + F[i - 2];
+            if (val >= MOD) val -= MOD;
+            F[i] = val;
+        }
+
+        // 2. Build Prefix Sums
+        int[] P = new int[N + 1];
+        for (int i = 0; i < N; i++) {
+            int val = P[i] + F[I[i]];
+            if (val >= MOD) val -= MOD;
+            P[i + 1] = val;
+        }
+
+        // 3. Answer queries
+        StringBuilder sb = new StringBuilder();
+        for (int q = 0; q < Q; q++) {
+            st = new StringTokenizer(br.readLine());
+            int L = Integer.parseInt(st.nextToken());
+            int R = Integer.parseInt(st.nextToken());
+            int ans = P[R] - P[L - 1];
+            if (ans < 0) ans += MOD;
+            sb.append(ans).append("\n");
+        }
+
+        System.out.print(sb.toString());
     }
 }
