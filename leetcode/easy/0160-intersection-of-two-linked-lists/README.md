@@ -77,9 +77,9 @@ Explanation: The two lists do not intersect, so return null.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 99.97%)  
-**Memory:** 52.5 MB (beats 65.04%)  
-**Submitted:** 2026-11-18T11:38:41.684Z  
+**Runtime:** 0 ms  
+**Memory:** 42.1 MB  
+**Submitted:** 2026-11-18T11:39:18.723Z  
 
 ```java
 /**
