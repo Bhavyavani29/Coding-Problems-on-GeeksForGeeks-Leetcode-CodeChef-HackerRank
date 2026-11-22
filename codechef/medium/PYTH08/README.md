@@ -4,23 +4,40 @@
 
 ## Problem
 
-_Description not available._
+### Outputs on the same line
+
+Listen
+
+We can print multiple items by separating by commas. Python will automatically add a space between them.
+
+```
+print(1, 2, 3, 4) # Output: 1 2 3 4
+
+```
+
+When you use commas to separate items inside the print() function, Python prints each item with a space in between.
+
+#### Task
+
+Write a program which does the following
+
+- Output: 3 + 4
+- Output: 2 + 1 on the same line
+
+Note how the numbers are space separated.
 
 ## Solution
 
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-22T12:44:51.736Z  
+**Submitted:** 2026-11-22T12:45:15.244Z  
 
 ```py
-# Update the '_' in the code below to output the following 
-# 7
-# 3
+# Update the '_' in the code below to provide the following output
+# 7 3
 
-print(3 + 4)
-
-print(2 + 1)
+print(3 + 4, 2 + 1)
 ```
 
 ---
