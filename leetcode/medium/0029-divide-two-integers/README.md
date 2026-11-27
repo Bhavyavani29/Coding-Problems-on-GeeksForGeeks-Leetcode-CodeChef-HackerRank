@@ -45,33 +45,25 @@ Explanation: 7/-3 = -2.33333.. which is truncated to -2.
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 49.64%)  
-**Memory:** 41.8 MB (beats 94.93%)  
-**Submitted:** 2026-11-27T08:33:09.551Z  
+**Memory:** 42.3 MB (beats 55.87%)  
+**Submitted:** 2026-11-27T08:34:14.010Z  
 
 ```java
 class Solution {
     public int divide(int dividend, int divisor) {
-        // Handle the only case that overflows 32-bit signed integer
         if (dividend == Integer.MIN_VALUE && divisor == -1) {
             return Integer.MAX_VALUE;
         }
-
-        // Determine if the result should be negative using XOR
         boolean isNegative = (dividend < 0) ^ (divisor < 0);
-
         long n = Math.abs((long) dividend);
         long d = Math.abs((long) divisor);
         long ans = 0;
-
-        // Check bits from 31 down to 0 in a single O(log N) pass
         for (int i = 31; i >= 0; i--) {
             if ((n >> i) >= d) {
                 ans += (1L << i);
                 n -= (d << i);
             }
         }
-
-        // Apply sign without using the '*' operator
         return isNegative ? (int) -ans : (int) ans;
     }
 }
